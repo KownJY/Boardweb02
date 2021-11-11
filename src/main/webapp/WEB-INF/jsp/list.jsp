@@ -13,12 +13,25 @@
 
 </head>
 <body>
+
+<div>
+    <a href="/write">
+        <input type="button" value="글쓰기">
+    </a>
+
+
+</div>
 <table>
 
     <% for(Board2VO vo : list) { %>
     <tr>
         <td><%=vo.getIboard()%></td>
-        <td><%=vo.getTitle()%></td>
+        <td>
+            <a href="/detail?iboard=<%=vo.getIboard()%>">
+                <%=vo.getTitle()%>
+            </a>
+
+        </td>
         <td><%=vo.getCtnt()%></td>
         <td><%=vo.getWriter()%></td>
         <td><%=vo.getRdt()%></td>
